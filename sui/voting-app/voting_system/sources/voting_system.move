@@ -1,7 +1,8 @@
-module voting_system::Dashboard {
+module voting_system::dashboard {
 use std::string::String;
+// use sui::tx_context::{Self, TxContext};
 
-    public struct Proposal {
+    public struct Proposal has key {
         id : UID,
         title : String,
         description : String,
@@ -13,7 +14,7 @@ use std::string::String;
     }
 
 
-    public fn create_proposal(title : String, description : String, expiration : u64, ctx : &mut TxnContext) {
+    public fun create_proposal(title : String, description : String, expiration : u64, ctx : &mut TxContext) {
             let proposal = Proposal {
                 id : object::new(ctx),
                 title : title,
@@ -28,8 +29,6 @@ use std::string::String;
             transfer::share_object(proposal);
         }
 
-
-    )
 
 
 }
