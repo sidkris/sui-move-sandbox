@@ -1,2 +1,7 @@
-module 0x0::voting_system;
+module voting_system::dashboard;
 
+public struct Proposal has key {
+
+    id : UID
+
+}
