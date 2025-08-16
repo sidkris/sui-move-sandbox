@@ -24,6 +24,8 @@ use std::string::String;
                 creator : ctx.sender(),
                 voter_registry : vector::empty(),
             };
+
+            transfer::share_object(proposal);
         }
 
 
