@@ -13,7 +13,7 @@ use std::string::String;
     }
 
 
-    public fn create_proposal(title : String, description : String, expiration : u64, ctx : TxnContext) {
+    public fn create_proposal(title : String, description : String, expiration : u64, ctx : &mut TxnContext) {
             let proposal = Proposal {
                 id : object::new(ctx),
                 title : title,
