@@ -7,3 +7,12 @@ module voting_system::voting_system;
 // https://docs.sui.io/concepts/sui-move-concepts/conventions
 
 
+module voting_system::Dashboard {
+
+    public struct Proposal {
+        id : UID,
+        
+    }
+
+
+}
